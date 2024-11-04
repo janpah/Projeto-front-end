@@ -1,0 +1,9 @@
+<div class="container">
+  <h2 class="title">Bem-vindo ao Aplicativo de Cães!</h2>
+  <div class="dog-list">
+    <div *ngFor="let dog of dogs" class="dog-card">
+      <h3>{{ dog.name }}</h3>
+      <img [src]="dog.image?.url" alt="{{ dog.name }}" />
+    </div>
+  </div>
+</div>
