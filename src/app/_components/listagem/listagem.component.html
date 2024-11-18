@@ -1,0 +1,19 @@
+<div class="container">
+  <h2 class="title">Lista de Raças de Cães</h2>
+
+  <!-- Campo de Pesquisa -->
+  <input class="pesquisa" [(ngModel)]="searchText" placeholder="Pesquise uma raça..." />
+
+  <div class="dog-list">
+    <!-- Filtra as raças com base no texto de pesquisa -->
+    <div *ngFor="let dog of dogs | filter: searchText" class="dog-card">
+      <h3>{{ dog.name }}</h3>
+      <img [src]="dog.image?.url" alt="{{ dog.name }}" width="200">
+
+      <!-- Botão Detalhes -->
+      <button class="detalhes" [routerLink]="['/detalhes', dog.id]" appHoverSize appHighlight>
+        DETALHES
+      </button>
+    </div>
+  </div>
+</div>

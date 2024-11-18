@@ -1,0 +1,10 @@
+<div class="container">
+  <h2 class="title" appHoverSize>{{ dog?.name }}</h2>
+  <img [src]="dog?.image?.url" alt="{{ dog?.name }}" class="dog-image">
+
+  <p class="description"><span class="info">Temperamento:</span> {{ dog?.temperament }}</p>
+  <p class="description"><span class="info">Expectativa de Vida:</span> {{ dog?.life_span }}</p>
+  <p class="description"><span class="info">Peso:</span> {{ dog?.weight?.metric }} kg</p>
+  <p class="description"><span class="info">Altura:</span> {{ dog?.height?.metric }} cm</p>
+
+

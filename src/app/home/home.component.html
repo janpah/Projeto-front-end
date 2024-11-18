@@ -1,5 +1,14 @@
 <div class="container">
-  <h2 class="title">Bem-vindo ao Aplicativo de Cães!</h2>
+  <h2 class="title" *appShowIfLogged="isLoggedIn"  >{{ 'bem-vindo ao aplicativo de cães' | capitalize }}</h2>
+  <p class="description">
+    Este site foi desenvolvido para os apaixonados por cães que desejam conhecer melhor as diversas raças de cachorros ao redor do mundo. Aqui você pode explorar um catálogo de raças, com informações detalhadas sobre cada uma delas, incluindo fotos, características, e particularidades. Através desta plataforma, queremos ajudar você a descobrir mais sobre o temperamento, necessidades e históricos de várias raças, seja para escolher o pet ideal, para aprender mais sobre um novo companheiro ou apenas para expandir seu conhecimento sobre esses animais incríveis.
+  </p>
+
+  <p class="description">
+    Navegue pela nossa listagem de raças e aproveite para visualizar as fotos de cada cãozinho, entender suas origens e se familiarizar com o perfil de cada um. Sabemos que os cães têm um papel especial em nossas vidas, então esperamos que você encontre aqui um espaço informativo e útil para suas descobertas sobre o mundo canino. Seja bem-vindo e boa exploração!
+  </p>
+
+
   <div class="dog-list">
     <div *ngFor="let dog of dogs" class="dog-card">
       <h3>{{ dog.name }}</h3>
@@ -7,3 +16,10 @@
     </div>
   </div>
 </div>
+
+<nav class=" url">
+  <a routerLink="/">Home</a> |
+  <a routerLink="/listagem">Listagem de Raças</a>
+</nav>
+
+

@@ -1,14 +1,26 @@
+
+  body {
+    background-image: url('/assets/images/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 .container {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
   text-align: center;
 }
-
+.sub-title{
+  font-size: 2.0em; ;
+  margin-bottom: 0.5em;
+  color: #4a4a4a;
+}
 .title {
   font-size: 2.5em;
   margin-bottom: 0.5em;
-  color: #4a4a4a;
+  color: blackk;
 }
 
 .dog-list {
@@ -22,7 +34,7 @@
   width: 200px;
   padding: 15px;
   border-radius: 10px;
-  background: #f4f4f4;
+  background: gray;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
@@ -35,4 +47,9 @@
 .dog-card h3 {
   font-size: 1.2em;
   margin: 10px 0;
+}
+.url{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
