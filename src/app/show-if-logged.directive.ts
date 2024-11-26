@@ -1,7 +1,7 @@
 import { Directive, Input, TemplateRef, ViewContainerRef } from '@angular/core';
 
 @Directive({
-  selector: '[appShowIfLogged]' // Nome da diretiva estrutural
+  selector: '[appShowIfLogged]' 
 })
 export class ShowIfLoggedDirective {
   private hasView = false;

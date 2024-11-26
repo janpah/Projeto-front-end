@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http'; // Importe o HttpHeaders
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Component({
   selector: 'app-home',
@@ -7,29 +7,29 @@ import { HttpClient, HttpHeaders } from '@angular/common/http'; // Importe o Htt
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  dogs: any[] = []; // array para armazenar os dados dos cães
+  dogs: any[] = [];
 
   constructor(private http: HttpClient) {}
 
-  isLoggedIn = true; // ou false para testar
+  isLoggedIn = true;
 
   ngOnInit(): void {
-    this.getDogs(); // chama o metodo para carregar os dados dos cães
+    this.getDogs();
   }
 
   getDogs(): void {
     // Adicionando o cabeçalho com a chave da API
 const headers = new HttpHeaders({
-      'x-api-key': 'live_YTM1JczJwoTp6PclwG3ewAn5PiQdgJrjSo9CbgTEkJOeS8IPb0NSuJmQSE3tJEgA' // substituia pela sua chave fornecida pela API
+      'x-api-key': 'live_YTM1JczJwoTp6PclwG3ewAn5PiQdgJrjSo9CbgTEkJOeS8IPb0NSuJmQSE3tJEgA'
     });
 
     this.http.get<any[]>('https://api.thedogapi.com/v1/breeds', { headers }).subscribe(
    (data) => {
-         console.log(data); // aerifica os dados no console
-         this.dogs = data.slice(0, 3); // armazenaa os dados retornados na propriedade 'dogs'
+         console.log(data);
+         this.dogs = data.slice(0, 3);
       },
       (error) => {
-         console.error('Erro ao carregar dados dos cães:', error); //exibe erro no console
+         console.error('Erro ao carregar dados dos cães:', error); 
       }
     );
   }

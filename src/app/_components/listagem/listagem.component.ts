@@ -8,12 +8,12 @@ import { HttpClient , HttpHeaders} from '@angular/common/http';
   styleUrls: ['./listagem.component.css']
 })
 export class ListagemComponent implements OnInit {
-  dogs: any[] = []; // Array para armazenar os dados dos cães
+  dogs: any[] = []; 
   searchText: string = '';
   constructor(private http: HttpClient) {}
 
   ngOnInit(): void {
-    this.getDogs(); // Chama o método para carregar os dados dos cães
+    this.getDogs();
   }
 
 

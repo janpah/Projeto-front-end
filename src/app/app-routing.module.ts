@@ -5,9 +5,9 @@ import { ListagemComponent } from './_components/listagem/listagem.component';
 import { DetalhesComponent } from './detalhes/detalhes.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent }, // Rota padrão que carrega o HomeComponent
-  {path: 'listagem', component: ListagemComponent }, // Rota da página Listagem
-  {path: 'detalhes/:id', component: DetalhesComponent }, //Rota da pagina Detalhes
+  { path: '', component: HomeComponent }, 
+  {path: 'listagem', component: ListagemComponent },
+  {path: 'detalhes/:id', component: DetalhesComponent },
 ];
 
 @NgModule({
